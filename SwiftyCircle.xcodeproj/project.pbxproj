@@ -407,6 +407,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.Bilal-Karim-Reffas..SwiftyCircle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -418,6 +419,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.Bilal-Karim-Reffas..SwiftyCircle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -488,6 +490,7 @@
 				500F43A91BE898A40062C441 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		500F43AA1BE898A40062C441 /* Build configuration list for PBXNativeTarget "SwiftyCircleTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +499,7 @@
 				500F43AC1BE898A40062C441 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		500F43AD1BE898A40062C441 /* Build configuration list for PBXNativeTarget "SwiftyCircleUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +508,7 @@
 				500F43AF1BE898A40062C441 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
