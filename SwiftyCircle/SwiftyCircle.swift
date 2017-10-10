@@ -49,25 +49,25 @@ import UIKit
         }
     }
     
-    @IBInspectable public var lowerCirlceStrokeColor : UIColor = UIColor.gray{
+    @IBInspectable public var lowerCircleStrokeColor : UIColor = UIColor.gray{
         didSet {
             setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var lowerCirlceStrokeWidth : CGFloat = 3.0 {
+    @IBInspectable public var lowerCircleStrokeWidth : CGFloat = 3.0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var lowerCirlceProgress : CGFloat = 1.0{
+    @IBInspectable public var lowerCircleProgress : CGFloat = 1.0{
         didSet {
             setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var drawlowerCirlce : Bool = false{
+    @IBInspectable public var drawlowerCircle : Bool = false{
         didSet {
             setNeedsDisplay()
         }
@@ -107,16 +107,16 @@ import UIKit
         self.animateCircle(duration: 0.2, sender : true)
         
         
-        if self.drawlowerCirlce == true {
-            /**Draw the LowerCirlcle**/
+        if self.drawlowerCircle == true {
+            /**Draw the lowerCircle**/
             self.constants.lowerCircle.path = UIBezierPath(arcCenter: arcCenter, radius: radius, startAngle: startAngel, endAngle: endAngel , clockwise: true).cgPath
-            self.constants.lowerCircle.lineWidth = self.lowerCirlceStrokeWidth
-                self.constants.lowerCircle.strokeStart = 0.0
-            self.constants.lowerCircle.strokeEnd = self.lowerCirlceProgress
+            self.constants.lowerCircle.lineWidth = self.lowerCircleStrokeWidth
+            self.constants.lowerCircle.strokeStart = 0.0
+            self.constants.lowerCircle.strokeEnd = self.lowerCircleProgress
             self.constants.lowerCircle.speed = 0.1
             self.constants.lowerCircle.lineCap = self.roundCap == true ? kCALineCapRound  : kCALineCapButt
             self.constants.lowerCircle.fillColor = UIColor.clear.cgColor
-            self.constants.lowerCircle.strokeColor = self.lowerCirlceStrokeColor.cgColor
+            self.constants.lowerCircle.strokeColor = self.lowerCircleStrokeColor.cgColor
             self.layer.addSublayer(self.constants.lowerCircle)
         }
             self.layer.addSublayer(self.constants.higherCircle)
@@ -129,7 +129,7 @@ import UIKit
         let animation = CABasicAnimation(keyPath: "strokeEnd")
                 animation.duration = duration
                 animation.fromValue = 0
-        animation.toValue = sender == true ? self.progress : self.lowerCirlceProgress
+        animation.toValue = sender == true ? self.progress : self.lowerCircleProgress
                 animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         
         self.constants.higherCircle.strokeEnd =  self.progress
